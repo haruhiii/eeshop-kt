@@ -12,6 +12,11 @@ jobs:
     - uses: actions/setup-java@v1
       with: 
         java-version: '12'
+        
+    - name: GitHub Action for Maven
+      uses: LucaFeger/action-maven-cli@1.1.0
+    
+        
     - name: Run a one-line script
       run: ls
     - name: Run a multi-line script
@@ -19,6 +24,6 @@ jobs:
         echo Add other actions to build
         echo test, and deploy your project.
         ls
-        java 
-        
-    
+        pwd
+        java -version
+        mvn
