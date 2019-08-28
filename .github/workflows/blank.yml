@@ -13,8 +13,7 @@ jobs:
       with: 
         java-version: '12'
         
-    - name: GitHub Action for Maven
-      uses: LucaFeger/action-maven-cli@1.1.0
+    - uses: LucaFeger/action-maven-cli@1.1.0
     
         
     - name: Run a one-line script
