@@ -9,9 +9,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - uses：actions/setup-java@v1
     - name: Run a one-line script
-      run: echo Hello, world!
+      run: ls
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
-        echo test, and deploy your project.
+        echo test, and deploy your project.,
+        ls,
+        pwd
