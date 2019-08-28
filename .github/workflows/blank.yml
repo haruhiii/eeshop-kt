@@ -15,4 +15,4 @@ jobs:
         java-version: 12
         
     - name: Build with Maven
-      run: mvn 
+      run: mvn package --file eureka/pom.xml
