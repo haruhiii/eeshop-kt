@@ -1,0 +1,25 @@
+server:
+    port: 11202
+spring:
+  application:
+    name: demo-foo
+  cloud:
+    config:
+      profile: dev
+      label: master
+      # 需要的配置文件，多个用逗号隔开
+      name: eureka-common
+      discovery:
+        service-id: config
+        enabled: true
+eureka:
+  client:
+    region: xiangmeng,beijing
+    availability-zones:
+      xiangmeng: xm1,xm2
+      beijing: bj1
+    service-url:
+      xm1: http://eurekaserver1:11403/eureka/
+      xm2: http://eurekaserver2:11402/eureka/
+      bj1: http://eurekaserver3:11401/eureka/
+ret: ssss
