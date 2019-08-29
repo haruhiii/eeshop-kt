@@ -40,5 +40,4 @@ jobs:
         name: my-artifact
         path: /path/to/artifact
 
-  - 
     
