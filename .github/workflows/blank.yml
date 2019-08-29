@@ -35,10 +35,10 @@ jobs:
         run: mv target/*.jar /path/to/artifact
         cd
    
-      uses: actions/upload-artifact@master
-          with:
-            name: my-artifact
-            path: /path/to/artifact
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact
+        path: /path/to/artifact
 
   - 
     
