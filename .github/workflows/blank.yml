@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v1
-      run: mkdir -p /path/to/artifact
+      run: mkdir -p path/to/artifact
 
     - name: Set java12
       uses: actions/setup-java@v1
@@ -25,18 +25,18 @@ jobs:
       run: |
         cd eureka
         mvn package 
-        run: mv target/*.jar /path/to/artifact
+        run: mv target/*.jar ../path/to/artifact
         cd 
         
     - name: Build Config with Maven
       run: |
         cd config
         mvn package 
-        run: mv target/*.jar /path/to/artifact
+        run: mv target/*.jar ../path/to/artifact
         cd
    
     - name: upload artifacts
       uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: /path/to/artifact
+        path: path/to/artifact
