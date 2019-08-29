@@ -21,13 +21,13 @@ jobs:
       run: |
         cd eureka
         mvn package 
-        run: mv target/*.jar ../path/to/artifact
+        mv target/*.jar ../path/to/artifact
         cd 
     - name: Build Config with Maven
       run: |
         cd config
         mvn package 
-        run: mv target/*.jar ../path/to/artifact
+        mv target/*.jar ../path/to/artifact
         cd
     - name: upload artifacts
       uses: actions/upload-artifact@master
